@@ -48,5 +48,3 @@ async function app() {
 }
 
 app();
-
-git push --set-upstream origin development
