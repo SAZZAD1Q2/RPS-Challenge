@@ -16,14 +16,14 @@ function validateMoves(moves) {
       chalk.red(
         `Invalid arguments: Please provide an odd number (at least 3) of unique moves.
       \nExample Valid Moves:
-      - node main.js MOVE1 MOVE2 MOVE3
-      - node main.js STONE PAPER SCISSORS
-      - node main.js Rock Paper STONE LIZARD SPOCK
+      - node app.js MOVE1 MOVE2 MOVE3
+      - node app.js STONE PAPER SCISSORS
+      - node app.js Rock Paper STONE LIZARD SPOCK
       \nExamples of Invalid Moves:
-      - node main.js
-      - node main.js Rock
-      - node main.js A A A
-      - node main.js Rock Paper Paper`
+      - node app.js
+      - node app.js Rock
+      - node app.js A A A
+      - node app.js Rock Paper Paper`
       )
     );
   }
@@ -48,3 +48,4 @@ async function app() {
 }
 
 app();
+
