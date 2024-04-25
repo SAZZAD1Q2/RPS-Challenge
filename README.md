@@ -30,229 +30,154 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [RPS-Challenge] <a name="about-project"></a>
+# 📖 RPS-Challenge <a name="about-project"></a>
 
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
+Introducing RPS-Challenge - a command-line game that puts a cryptographic spin on the classic Rock, Paper, Scissors! Developed in JavaScript, this game elevates the traditional gameplay with the use of HMAC (Hash-based Message Authentication Code), ensuring both security and fair play. Enjoy a unique gaming experience with RPS-Challenge!
 
 ## 🛠 Built With <a name="built-with"></a>
 
-### Tech Stack <a name="tech-stack"></a>
-
-> Describe the tech stack and include only the relevant sections that apply to your project.
+## Tech Stack <a name="tech-stack"></a>
 
 <details>
-  <summary>Client</summary>
+  <summary>BUILT WITH</summary>
   <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
+    <li><a href=#>console app</a></li>
+    <li>Node.js</li>
+    <li>JavaScript.js</li>
   </ul>
 </details>
-
 <details>
-  <summary>Server</summary>
+  <summary>Run environment</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href=#>console app</a></li>
+     <li>Node.js</li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+ <li>no Database</li>
   </ul>
 </details>
 
-<!-- Features -->
+### 🎮 Game Overview <a name="game-overview"></a>
 
-### Key Features <a name="key-features"></a>
+RPS-Challenge brings a fresh twist to the classic Rock, Paper, Scissors game by securing each move with HMAC. Each game session is enhanced with a unique HMAC key, providing additional security and ensuring transparent gameplay.
 
-> Describe between 1-3 key features of the application.
+### 🔑 HMAC Generation <a name="hmac-generation"></a>
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://google.com)
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+The game employs cryptographic techniques to create HMAC keys and hash player moves, guaranteeing that the outcomes are both secure and verifiable.
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+### 🛠 Prerequisites <a name="prerequisites"></a>
 
-To get a local copy up and running, follow these steps.
+To run RPS-Challenge, you need the following:
 
-### Prerequisites
+- Node.js installed on your machine
 
-In order to run this project you need:
+### 🚀 Installation <a name="installation"></a>
 
-<!--
-Example command:
+1. Clone the repository:
 
-```sh
- gem install rails
-```
- -->
+   ```bash
+    https://github.com/SAZZAD1Q2/RPS-Challenge.git
+    cd RPS-Challenge
+   ```
 
-### Setup
+2. Install dependencies:
 
-Clone this repository to your desired folder:
+   ```bash
+   npm install
+   ```
 
-<!--
-Example commands:
+<!-- GAMEPLAY -->
 
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
+## 🎮 Gameplay <a name="gameplay"></a>
 
-### Install
+### 🔄 How to Play <a name="how-to-play"></a>
 
-Install this project with:
+1. Run the game:
 
-<!--
-Example command:
+   ```bash
 
-```sh
-  cd my-project
-  gem install
-```
---->
+   node app.js MOVE1 MOVE2 MOVE3
 
-### Usage
+   ```
 
-To run the project, execute the following command:
+   ## Example Valid Moves:
 
-<!--
-Example command:
+   - node app.js MOVE1 MOVE2 MOVE3
+   - node app.js STONE PAPER SCISSORS
+   - node app.js STONE SPOCK PAPER LIZARD SCISSORS
+   - node app.js Rock Paper STONE LIZARD SPOCK
+   - node app.js A B C D E F G
+   - node app.js 1 2 3 4 5 6 7 8 9
 
-```sh
-  rails server
-```
---->
+   ## Examples of Invalid moves:
 
-### Run tests
+   - node app.js
+   - node app.js Rock
+   - node app.js A A A
+   - node app.js Rock Paper Paper
+   - node app.js Rock Paper Scissors Lizard Scissors
+   - node app.js 1 2 3 4 5 6 7 8
 
-To run tests, run the following command:
+2. Follow the on-screen instructions to make your move.
 
-<!--
-Example command:
+3. Enjoy the game and verify its transparency using HMAC!
 
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+### 📊 Game Logic <a name="game-logic"></a>
 
-### Deployment
+The game adheres to traditional Rock, Paper, Scissors rules but introduces an extra layer of cryptographic protection. Using an HMAC key, it ensures that all moves are tamper-proof and can be independently verified..
 
-You can deploy this project using:
+## HELP TABLE
 
-<!--
-Example:
+Results are from the user's point of view:
+which move would result in what? You Win / Lose / Draw
 
-```sh
+| v PC\User > | ROCK | STONE | LIZARD | SPOCK | PAPER | 6TH  | 7TH  |
+| ----------- | ---- | ----- | ------ | ----- | ----- | ---- | ---- |
+| ROCK        | Draw | Win   | Win    | Win   | Lose  | Lose | Lose |
+| STONE       | Lose | Draw  | Win    | Win   | Win   | Lose | Lose |
+| LIZARD      | Lose | Lose  | Draw   | Win   | Win   | Win  | Lose |
+| SPOCK       | Lose | Lose  | Lose   | Draw  | Win   | Win  | Win  |
+| PAPER       | Win  | Lose  | Lose   | Lose  | Draw  | Win  | Win  |
+| 6TH         | Win  | Win   | Lose   | Lose  | Lose  | Draw | Win  |
+| 7TH         | Win  | Win   | Win    | Lose  | Lose  | Lose | Draw |
 
-```
- -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- AUTHORS -->
+<!-- AUTHOR -->
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+## 👤 Md Sazzad Hossain
 
-👤 **Author1**
+- GitHub: [SAZZAD1Q2](https://github.com/SAZZAD1Q2)
+- Twitter: [Md Sazzad Hossain](https://twitter.com/sazzad2ysh)
+- LinkedIn: [Md Sazzad Hossain](https://www.linkedin.com/in/sazzad3y/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## Future Features
 
-👤 **Author2**
+- UI LOOK
+- INTERACTIVE GAME
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## Contributing
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
-
-## 🔭 Future Features <a name="future-features"></a>
-
-> Describe 1 - 3 features you will add to the project.
-
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
-
-Contributions, issues, and feature requests are welcome!
+Everyone is invited to contribute to this project, suggest modifications, report problems, and request new features. To get involved, simply fork this repository, create a new branch for your changes, and submit a pull request from your branch to initiate the review process.
 
 Feel free to check the [issues page](../../issues/).
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## Show Your Support
 
-<!-- SUPPORT -->
+If you feel interest in this project, please give it a star ⭐️. You can use it following the [MIT License](./LICENSE).
 
-## ⭐️ Show your support <a name="support"></a>
+## Acknowledgments
 
-> Write a message to encourage readers to support your project
+I would like to thank [Itransition-Group](https://www.itransition.com/) for the opportunity to learn and use their platform and services.
 
-If you like this project...
+## License
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FAQ (optional) -->
-
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
-
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
-
-## 📝 License <a name="license"></a>
-
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+This project is under the [MIT License](./LICENSE).
